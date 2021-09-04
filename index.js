@@ -12,8 +12,8 @@ app.use(express.json());
 app.use(cors());
 
 // database connection with mongose
-const uri =
-  " mongodb+srv://mongoosePractice:ArifulIslamRaju000@cluster0.yaeov.mongodb.net/mongoosePrac?retryWrites=true&w=majority";
+//const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.yaeov.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://mongoosePractice:ArifulIslamRaju000@cluster0.yaeov.mongodb.net/mongoosePrac?retryWrites=true&w=majority`;
 mongoose
   .connect(uri, {
     useNewUrlParser: true,
